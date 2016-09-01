@@ -2,6 +2,10 @@
 #include <iostream>
 #include <string>
 
+class ReadFile(){
+   
+}
+
 ReadFile* createReadFile(const char* file_name)
 {
    ReadFile* rf = new ReadFile;
