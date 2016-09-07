@@ -3,9 +3,7 @@
 #include <string>
 
 
-ReadFile::ReadFile(const char* file_name)
-{
-   // ReadFile* rf = new ReadFile;
+ReadFile::ReadFile(const char* file_name){
 
    input_file.open(file_name);
    closed = false;
@@ -13,21 +11,18 @@ ReadFile::ReadFile(const char* file_name)
 
 }
 
-ReadFile::~ReadFile()
-{
+ReadFile::~ReadFile(){
    // delete input_file;
    // delete closed;
    // delete _eof;
 
 }
 
-bool ReadFile::eof()
-{
+bool ReadFile::eof(){
    return _eof;
 }
 
-void ReadFile::close()
-{
+void ReadFile::close(){
    if (!closed)
    {
       input_file.close();
@@ -35,8 +30,7 @@ void ReadFile::close()
    }
 }
 
-String* ReadFile::readLine()
-{
+String* ReadFile::readLine(){
    if (closed) return NULL;
    if (_eof) return NULL;
 
